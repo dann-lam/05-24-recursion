@@ -10,7 +10,19 @@ isSorted([2, 4, 6, 7, 8]); // true
 isSorted([5, 4, 3, 2, 1]); // false
 ***********************************************************************/
 
-// your code here
+const isSorted = arr => {
+  // if (arr.length === 1) return true;
+  // let currentNum = arr.shift();
+  // if (currentNum > arr[0]) return false;
+  // if (currentNum < arr[0]) return isSorted(arr);
+
+    if (arr.length === 0) return true;
+    if (arr[0] > arr[1]) return false;
+    let lastEl = arr.pop();
+    if (lastEl > arr[arr.length - 1]) return isSorted(arr)
+    return false;
+  
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
