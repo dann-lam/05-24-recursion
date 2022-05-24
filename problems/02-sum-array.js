@@ -10,7 +10,15 @@ sumArray([0, 1, -3]); //  -2
 sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
 
+let sumArray = (array) => {
+  if (array.length === 0) return 0;
 
+  let num = array[0];
+
+  let result = num + sumArray(array.slice(1));
+
+  return result;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
