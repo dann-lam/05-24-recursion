@@ -16,8 +16,8 @@ const isSorted = arr => {
   // if (currentNum > arr[0]) return false;
   // if (currentNum < arr[0]) return isSorted(arr);
 
-    if (arr.length === 0) return true;
-    if (arr[0] > arr[1]) return false;
+    if (arr.length === 1) return true;
+    // if (arr[0] > arr[1]) return false;
     let lastEl = arr.pop();
     if (lastEl > arr[arr.length - 1]) return isSorted(arr)
     return false;
