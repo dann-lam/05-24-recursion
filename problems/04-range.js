@@ -5,22 +5,22 @@ the start, return an empty array.
 
 Examples:
 
-range(1, 5); // [1, 2, 3, 4]
-range(3, 4); // [3]
-range(7, 6); // []
 ***********************************************************************/
 
 const range = (start, end) => {
-//If end ## is less than start, return empty array
+  //If end ## is less than start, return empty array
   if(end < start) return []
-//Why this here tho?? :thinking emoji:
+  //Why this here tho?? :thinking emoji:
   if(start === end) return []
-
+  
   return [start, ...range(start + 1, end)]
-
+  
 }
 
 
+console.log(range(1, 5)); // [1, 2, 3, 4]
+range(3, 4); // [3]
+range(7, 6); // []
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
