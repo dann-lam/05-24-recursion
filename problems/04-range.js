@@ -10,8 +10,17 @@ range(3, 4); // [3]
 range(7, 6); // []
 ***********************************************************************/
 
+const range = (start, end) => {
+//If end ## is less than start, return empty array
+  if(end < start) return []
+//Why this here tho?? :thinking emoji:
+  if(start === end) return []
 
-// your code here
+  return [start, ...range(start + 1, end)]
+
+}
+
+
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
