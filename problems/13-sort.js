@@ -24,9 +24,9 @@ sort([]); // []
 function sort(nums, sorted = []) {
 if(!nums.length) return sorted;
 
-let smallest = Infinity;
+let smallest = nums[0];
 
-for(let i = 0; i < nums.length; i++){
+for(let i = 1; i < nums.length; i++){
   if (smallest > nums[i]){
     smallest = nums[i]
   }
