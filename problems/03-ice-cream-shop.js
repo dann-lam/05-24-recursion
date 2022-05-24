@@ -13,7 +13,17 @@ iceCreamShop([], 'honey lavender'); // false
 ***********************************************************************/
 
 
-// your code here
+function iceCreamShop(array, favorite){
+
+//base case is array is empty
+//if array is empty, than return false
+if(array.length === 0) return false
+
+if(array[0] == favorite) return true
+
+return iceCreamShop(array.splice(1), favorite)
+
+}
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
